@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm run build"
+buildCommand = "dotnet publish -c Release -o out"
 
 [deploy]
-startCommand = "npx serve dist --listen $PORT"
+startCommand = "dotnet out/Tech99.dll"
